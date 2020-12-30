@@ -1,0 +1,10 @@
+{
+  "compileOnSave": true,
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "target": "ES5",
+    "allowJs": true,
+    "baseUrl": "./",
+    "outDir": "../dist/"
+  }
+}
