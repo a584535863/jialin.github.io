@@ -5,7 +5,7 @@
       target="_blank"
       v-for="(item, id) in projects"
       :key="id"
-      class="card text-dark col-sm-3 me-3 mt-3"
+      class="card text-dark col-sm-3 mx-3 mt-3"
       style="background-color: rgba(255, 255, 255, 0.9)"
     >
       <img class="card-img-top" :src="item.preview" :alt="item.title" />
