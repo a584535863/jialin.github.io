@@ -1,14 +1,14 @@
 <template>
-  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <div class="cover-container d-flex w-100 h-100 mx-0 flex-column">
     <canvas id="bg"></canvas>
-    <header class="mb-auto">
-      <div>
-        <h3 class="float-md-start mb-0">--. .- .-. .-.. .. -.</h3>
+    <header class="mt-3 px-3">
+      <div class="w-100">
+        <h3 class="float-md-start px-3 mb-0">--. .- .-. .-.. .. -.</h3>
         <nav class="nav nav-masthead justify-content-center float-md-end">
           <router-link
             v-for="(item, id) in navlists"
             :key="id"
-            class="nav-link"
+            class="nav-link mx-3"
             active-class="active"
             exact-active-class=""
             :to="item.path"
@@ -21,6 +21,7 @@
     <main class="px-3">
       <router-view></router-view>
     </main>
+
     <footer class="mt-auto text-white-50">
       <p>@2020 Garlin</p>
     </footer>
@@ -190,15 +191,15 @@ export default vue.extend({
       navlists: [
         {
           path: "/home",
-          title: "主页",
+          title: "Home",
         },
         {
           path: "/list",
-          title: "项目",
+          title: "project",
         },
         {
           path: "/about",
-          title: "关于",
+          title: "about",
         },
       ],
       bgRenderer: null,
@@ -219,12 +220,8 @@ export default vue.extend({
 <style lang="scss">
 #bg {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: -1;
-  left: 0;
-  top: 0;
-  margin: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
 }
