@@ -117,7 +117,7 @@ header > .icon {
   width: 1.5em;
   height: 1.5em;
   background-size: 1.5em;
-  margin-top: 1em;
+  margin-top: 1.4em;
   padding: 0.75em;
   border-radius: 0.5em;
   border: 2px solid var(--dark-color);
