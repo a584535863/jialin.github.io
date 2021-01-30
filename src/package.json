@@ -16,7 +16,6 @@
   "author": "Garlin",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^5.0.0-beta1",
     "vue": "^2.6.12",
     "vue-router": "^3.4.9"
   },

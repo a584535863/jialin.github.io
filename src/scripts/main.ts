@@ -7,7 +7,6 @@ import ProjectList from "../components/ProjectList.vue";
 import About from "../components/About.vue";
 import Page404 from "../components/Page404.vue";
 
-import "bootstrap/scss/bootstrap.scss";
 import "../style/main.scss";
 
 Vue.use(VueRouter);

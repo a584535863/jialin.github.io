@@ -1,19 +1,14 @@
 <template>
-  <div
-    class="px-3 mt-3"
-    style="color: rgba(255, 255, 255, 0.8); text-align: left"
-  >
-    <p class="h1 md-3">{{ info.name }}</p>
-    <p class="h4">skills: {{ info.skills.join(" , ") }}</p>
-    <p class="h4">
-      github:<a :href="info.github" target="_blank">
-        {{ info.github }}
-      </a>
-    </p>
-    <p class="h4">
-      email:
-      <a :href="'mailto:' + info.email">{{ info.email }}</a>
-    </p>
+  <div class="info">
+    <h2>{{ info.name }}</h2>
+    <p class="skill">Skills:</p>
+    <p class="skill-info">{{ info.skills.join(", ") }}</p>
+    <p class="link">Github:</p>
+    <a class="link-info" :href="info.github" target="_blank">
+      {{ info.github }}
+    </a>
+    <p class="email">Email:</p>
+    <a class="email-info" :href="'mailto:' + info.email">{{ info.email }}</a>
   </div>
 </template>
 
@@ -27,20 +22,43 @@ export default vue.extend({
         name: "Garlin",
         github: "https://github.com/M9L6",
         email: "garlin92@qq.com",
-        skills: ["cocos", "unity", "typescipt", "c#"],
+        skills: ["cocos", "unity", "typescipt", "c#", "javascript"],
       },
     };
   },
 });
 </script>
 
-<style lang="scss" scoped>
-a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: underline;
+<style lang="scss" >
+.info {
+  display: flex;
+  flex-direction: column;
 }
 
-a:hover {
-  color: rgba(255, 255, 255, 1);
+.info > h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: left;
+  width: 100%;
+  margin: 0 0;
+  padding: 0.8em 0 0.2em 0;
+  border-bottom: 2px dashed var(--dark-color);
+}
+
+.info > .skill,
+.info > .link,
+.info > .email {
+  padding: 1em 0 0 0;
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.info > .skill-info,
+.info > .link-info,
+.info > .email-info {
+  color: var(--dark-color);
+  margin: 0;
+  padding: 0.3em 0 0 2em;
+  font-size: 1rem;
 }
 </style>
